@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="content">Content</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="about">About</a>
+    </li>
+
+    <!-- Dropdown -->
+    <li class="nav-item" ngbDropdown display="dynamic" placement="bottom-right" routerLink="overview">
+        <a class="nav-link" style="cursor: pointer" ngbDropdownToggle id="navbarDropdown3" role="button">
+         Overview
+        </a>
+        <div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+          <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Content</a>
+          <a ngbDropdownItem href="#" (click)="$event.preventDefault()">About Country</a>
+          <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
+        </div>
+      </li>
+  </ul>
+</nav>
