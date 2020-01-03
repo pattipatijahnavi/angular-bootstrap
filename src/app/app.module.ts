@@ -6,18 +6,25 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { NavComponent } from './nav/nav.component';
+import { NavComponent,NgbdModalContent  } from './nav/nav.component';
 import { ContentComponent } from './content/content.component';
 import { AboutComponent } from './about/about.component';
 import { OverviewComponent } from './overview/overview.component';
+import { ContentModelComponent} from './content-model/content-model.component';
+import { DirectiveDirective } from './directive.directive';
+import { TableService } from './table.service';
+
 
 @NgModule({
   imports: [ BrowserModule, FormsModule,NgbModule, RouterModule.forRoot([
     {path:'content', component:ContentComponent},
     {path:'about', component:AboutComponent},
-    {path:'overview', component:OverviewComponent}
+    {path:'overview', component:OverviewComponent},
+    {path:'contentmodel', component:ContentModelComponent}
   ]) ],
-  declarations: [ AppComponent, HelloComponent, NavComponent, ContentComponent, AboutComponent, OverviewComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [ AppComponent, HelloComponent, NavComponent, ContentComponent, AboutComponent, OverviewComponent,ContentModelComponent, NgbdModalContent, DirectiveDirective ],
+  bootstrap:    [ AppComponent ],
+  entryComponents: [NgbdModalContent],
+  providers: [TableService]
 })
 export class AppModule { }
