@@ -13,6 +13,8 @@ import { OverviewComponent } from './overview/overview.component';
 import { ContentModelComponent} from './content-model/content-model.component';
 import { DirectiveDirective } from './directive.directive';
 import { TableService } from './table.service';
+import { AboutcountryComponent } from './aboutcountry/aboutcountry.component';
+
 
 
 @NgModule({
@@ -20,9 +22,9 @@ import { TableService } from './table.service';
     {path:'content', component:ContentComponent},
     {path:'about', component:AboutComponent},
     {path:'overview', component:OverviewComponent},
-    {path:'contentmodel', component:ContentModelComponent}
+    {path:'aboutcountry', component:AboutcountryComponent}
   ]) ],
-  declarations: [ AppComponent, HelloComponent, NavComponent, ContentComponent, AboutComponent, OverviewComponent,ContentModelComponent, NgbdModalContent, DirectiveDirective ],
+  declarations: [ AppComponent, HelloComponent, NavComponent, ContentComponent, AboutComponent, OverviewComponent,ContentModelComponent, NgbdModalContent, DirectiveDirective, AboutcountryComponent],
   bootstrap:    [ AppComponent ],
   entryComponents: [NgbdModalContent],
   providers: [TableService]

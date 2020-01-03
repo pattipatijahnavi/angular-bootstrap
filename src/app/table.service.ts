@@ -9,7 +9,10 @@ interface Country {
   population: number;
 }
 
-const COUNTRIES: Country[] = [
+@Injectable()
+export class TableService {
+
+   COUNTRIES: Country[] = [
   {
     name: 'Russia',
     flag: 'f/f3/Flag_of_Russia.svg',
@@ -89,9 +92,5 @@ const COUNTRIES: Country[] = [
     population: 1409517397
   }
 ];
-@Injectable()
-export class TableService {
-
-  constructor() { }
 
 }
