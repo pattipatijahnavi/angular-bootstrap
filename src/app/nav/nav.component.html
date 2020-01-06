@@ -15,9 +15,9 @@
 			<a class="nav-link" style="cursor: pointer" ngbDropdownToggle id="navbarDropdown3" role="button">
 				Overview
 			</a>
-			<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu" routerLink="overview">
+			<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
 				<a ngbDropdownItem style="cursor: pointer" (click)="open()">Country</a>
-				<a ngbDropdownItem style="cursor: pointer" (click)="aboutCountry()">About Country</a>
+				<a ngbDropdownItem style="cursor: pointer" (click)="aboutCountry()"  [routerLink]="[aboutcountry]" > About Country</a>
 				<a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
 			</div>
 		</li>

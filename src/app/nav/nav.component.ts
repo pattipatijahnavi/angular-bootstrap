@@ -20,7 +20,7 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   `
 })
 export class NgbdModalContent {
-  @Input() name;
+ // @Input() name;
 
   constructor(public activeModal: NgbActiveModal) {}
 }
@@ -35,7 +35,7 @@ export class NavComponent implements OnInit {
   constructor(private modalService: NgbModal, private router: Router) { }
  open() {
     const modalRef = this.modalService.open(NgbdModalContent);
-    modalRef.componentInstance.name = 'World';
+   // modalRef.componentInstance.name = 'World';
   }
 
   ngOnInit() {
