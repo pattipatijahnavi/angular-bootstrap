@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TableService} from '../table.service';
+import { TableService } from '../table.service';
 @Component({
   selector: 'app-aboutcountry',
   templateUrl: './aboutcountry.component.html',
@@ -10,8 +10,11 @@ collectionSize;
   constructor( private tableService: TableService) { }
 
   ngOnInit() {
-
     this.collectionSize = this.tableService.COUNTRIES.length;
   }
-
+get countries(){
+    return this.tableService.COUNTRIES
+      .map((country, i) => ({id: i + 1, ...country}))
+      
+  }
 }
