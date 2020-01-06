@@ -1,4 +1,5 @@
 import { Component, OnInit, Input,} from '@angular/core';
+import { Router } from '@angular/router';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -31,7 +32,7 @@ export class NgbdModalContent {
 export class NavComponent implements OnInit {
 
   collapsed = true;
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, private router: Router) { }
  open() {
     const modalRef = this.modalService.open(NgbdModalContent);
     modalRef.componentInstance.name = 'World';
@@ -40,4 +41,7 @@ export class NavComponent implements OnInit {
   ngOnInit() {
   }
 
+  aboutCountry(){
+    this.router.navigate(['../aboutcountry']);
+  }
 }

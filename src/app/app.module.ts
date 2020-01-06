@@ -15,7 +15,6 @@ import { DirectiveDirective } from './directive.directive';
 import { TableService } from './table.service';
 import { AboutcountryComponent } from './aboutcountry/aboutcountry.component';
 
-
 @NgModule({
   imports: [ BrowserModule, FormsModule,NgbModule, RouterModule.forRoot([
     {path:'content', component:ContentComponent},
@@ -23,7 +22,7 @@ import { AboutcountryComponent } from './aboutcountry/aboutcountry.component';
     {path:'overview', component:OverviewComponent},
     {path:'aboutcountry', component:AboutcountryComponent}
   ]) ],
-  declarations: [ AppComponent, HelloComponent, NavComponent, ContentComponent, AboutComponent, OverviewComponent,ContentModelComponent, NgbdModalContent, DirectiveDirective, AboutcountryComponent, TabledirectiveDirective],
+  declarations: [ AppComponent, HelloComponent, NavComponent, ContentComponent, AboutComponent, OverviewComponent,ContentModelComponent, NgbdModalContent, DirectiveDirective, AboutcountryComponent],
   bootstrap:    [ AppComponent ],
   entryComponents: [NgbdModalContent],
   providers: [TableService]
